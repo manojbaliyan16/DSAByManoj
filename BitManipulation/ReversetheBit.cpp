@@ -2,7 +2,9 @@
 Reverse the bits of an 32 bit unsigned integer A.
 
 */
-
+#include <iostream>
+#include <vector>
+using namespace std;
 unsigned int reverse(unsigned int A)
 {
     /*
@@ -28,4 +30,11 @@ unsigned int reverse(unsigned int A)
    }
    return result;
 
+}
+int main()
+{
+    uint32_t A=3;
+    cout << reverse(A)<<endl;
+    return 0;
+    
 }
