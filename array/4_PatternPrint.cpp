@@ -31,7 +31,7 @@ vector<vector<int> > solve(int A){
 int main() {
     int A=3;
     vector<vector<int>> ret=solve(A);
-    for(auto row_obj : ret){
+    for(auto &row_obj : ret){
 
         for(auto elem:row_obj){
             cout << elem << " ";
