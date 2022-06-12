@@ -1,11 +1,8 @@
 //
 // Created by Manoj Kumar on 09/06/22.
+// Given two binary strings, return their sum (also a binary string
 //
 #include <iostream>
-#include <vector>
-#include <string>
-
-
 using namespace std;
 
 
