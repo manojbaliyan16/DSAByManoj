@@ -15,5 +15,7 @@ int solve(uint32_t A){
         }
         A=A>>1;
     }
+
+
     return count;
 }

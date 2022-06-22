@@ -29,7 +29,7 @@ int main() {
     vector<int> v{5,6,1,2,3,9};
     vector<int> x =solve(v);
     for(auto num:x){
-        cout << num << " " ;
+        cout << num << " ";
     }
     return 0;
 }

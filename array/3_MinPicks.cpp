@@ -3,6 +3,8 @@
 //You are given an array of integers A of size N.
 //Return the difference between the maximum among all even numbers of A and the minimum among all odd numbers in A.
 //
+//You are given an array of integers A of size N.
+// Return the difference between the maximum among all even numbers of A and the minimum among all odd numbers in A.
 //
 #include <iostream>
 #include <vector>
