@@ -11,6 +11,10 @@ Find the rotated array for each value and return the result in the from of a mat
 //0th Element of A will go its left but nothing is there on its left so technically we will assume it as rotatry element and it will come at last as below
 // [1,2,3,4,5]---->[2,3,4,5,1]---->[3,4,5,1,2]
 
+// Time Complexity O(n*m) // n is the size of A and m is the size of B
+// Space Complexity O(n)
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -43,3 +47,4 @@ int main(){
     }
 
 }
+
