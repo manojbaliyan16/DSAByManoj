@@ -35,7 +35,7 @@ vector <vector<int> > Solve(vector<int> &A, vector<int> &B){
     return ret;
 }
 int main(){
-    vector<int> A{1,2,3,4,5};
+    vector<int> A{1,2,3,4,5,6,7};
     vector<int> B{2,3};
     vector<vector<int> > result=Solve(A,B);
 
