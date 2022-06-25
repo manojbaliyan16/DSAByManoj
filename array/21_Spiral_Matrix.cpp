@@ -16,24 +16,20 @@ vector<int> Solve(vector<vector<int>> &myvec){
     int SC=0;
     while(SR <= ER && SC <= EC)
     {
-        for(int col=SC;col<=EC;++col)
+        for(int col=SC;col<=EC;++col) {
             result.push_back(myvec[SR][col]);
+        }
 
-        for(int row=SR+1;row<=ER;++row)
-        {
+        for(int row=SR+1;row<=ER;++row){
             result.push_back(myvec[row][EC]);
         }
-        if(SR<ER)
-        {
-            for(int col=EC-1;col>=SC;--col)
-            {
+        if(SR<ER){
+            for(int col=EC-1;col>=SC;--col){
                 result.push_back(myvec[ER][col]);
             }
         }
-        if(SC<EC)
-        {
-            for(int row=ER-1;row>SR;--row)
-            {
+        if(SC<EC){
+            for(int row=ER-1;row>SR;--row){
                 result.push_back(myvec[row][SC]);
             }
         }
