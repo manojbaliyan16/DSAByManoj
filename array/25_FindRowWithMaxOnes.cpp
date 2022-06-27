@@ -16,6 +16,18 @@ Expected time complexity is O(rows).
  * 1. All rows are sorted
  * 2. max ones --> return lower index --> we have to check the index from where ones starts
  * */
+
+/*Complexity
+ *  -----------(m)
+ *              |
+ *              |
+ *              |
+ *              |
+ *              |
+ *            (n)
+ * (m)-----------   TC O(2m+n)
+ * */
+
 #include <iostream>
 #include <vector>
 using namespace std;
