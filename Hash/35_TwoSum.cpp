@@ -15,10 +15,8 @@
 #include <map>
 
 using namespace std;
-void SolveTest(){
-
-
-}
+//Time Complexity = O(n)
+// Space Complexity = O(n) due to extra map and vector
 
 vector<int> Solve(const vector<int> &vec, int target){
     vector<int> ret;
