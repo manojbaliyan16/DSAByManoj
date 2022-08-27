@@ -15,20 +15,8 @@ int solve(vector<int> &vec){
 }
 
 int main(){
-    char c='1';
-    char d='0';
-   // string rt=c+d;
-   // cout << "OUttttt" << rt << endl;
-    printf("%c , %d", c, c);
-            cout << c-d << endl;
-    string res="";
-    string p="0";
-    res=p+res;
-            cout << "res is " <<res<< endl;
-            res=res+"0";
-
-            cout << "2. res is " << res << endl;
-
+    vector<int> vec{1,2,1,2,3,1,2,3};
+    cout<< solve(vec) << endl;
 
     return 0;
 
