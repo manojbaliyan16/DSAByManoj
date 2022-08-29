@@ -8,7 +8,7 @@ using namespace std;
 
 long int largestPowerof2inRange(int n){
     int x=0;
-    while((1<<x)<=n){
+    while((1<<x)<=n){ // 1<<x -> By  this we will create power of 2 
         x++;
     }
     return x-1;
@@ -20,11 +20,11 @@ long int countSetBits(int n){
         return 0;
     }
     long int x= largestPowerof2inRange(n); //x=powerof2
-    long int numberofbitsTillmaxPowerof2=x*(1<<(x-1));
-    long int msb2xton= (n-(1<<x)+1);
+    long int numberofbitsTillmaxPowerof2=x*(1<<(x-1)); // = pow(2,x-1)*x , 1<<(x-1)=power(2,x-1)
+    long int NumberOfmsbFrom2RaiseXtoN= (n-(1<<x)+1);  //n-pow(2,x)+1
 
-    long int restInteger = n-(1<<x);
-    long int ans=numberofbitsTillmaxPowerof2 %M +msb2xton + countSetBits(restInteger) ;
+    long int restInteger = n-(1<<x);// for which we have too call recursivley 
+    long int ans=numberofbitsTillmaxPowerof2 %M +NumberOfmsbFrom2RaiseXtoN + countSetBits(restInteger) ;
 
     return ans%M;
 }
