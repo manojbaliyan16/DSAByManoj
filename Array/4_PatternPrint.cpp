@@ -14,7 +14,7 @@
 #include <vector>
 using namespace std;
 vector<vector<int> > solve(int A){
-    vector<vector<int> > ret2D{0,vector<int>(0,0)};
+    vector<vector<int> > ret2D {0,vector<int>(0,0)};
     vector<int> ret;
     for(int i=1;i<=A;++i){
         ret.clear();
@@ -30,7 +30,7 @@ vector<vector<int> > solve(int A){
 
 int main() {
     int A=3;
-    vector<vector<int>> ret=solve(A);
+    vector<vector<int> > ret=solve(A);
     for(auto &row_obj : ret){
 
         for(auto elem:row_obj){
