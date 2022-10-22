@@ -1,0 +1,33 @@
+# There are following types of Binary Trees
+
+    - Full Binary Tree  : Every node having either 2 or 0 child
+
+  Complete Binary Tree : -> All levels are full expect the last one and in last level first nodes will get from left side.
+
+  Perfect Binary Tree : All levels are full.
+
+  Balanced Binary Tree : hieght should be of O(logn)  
+
+  Degenerate Binary Tree : Skewed Trees
+
+# Representation of Binary Tree
+
+- 
+struct Node{
+    int data;
+    struct Node* left;
+    sruct Node* right;
+    Node(int val){
+        data= val;
+        left=right=nullptr;
+    }
+};
+
+// creattree
+
+int main(){
+    struct Node* root=new Node(1);
+    root->left= new Node(2);
+    root->left= new Node(3);
+
+}
