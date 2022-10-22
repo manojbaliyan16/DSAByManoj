@@ -1,13 +1,23 @@
+/**
+ * @file 8_MaxSumPath.cpp
+ * @author Manoj
+ * @brief 
+ * @version 0.1
+ * @date 2022-10-22
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 
-
-
-/*
-longest path between two Nodes 
-path does not need to pass via root 
-
+/* 
+ find the Maximum sum over a path in the Binary tree
 */
+
+// Will be solved by Max Depth in TC() and SC = O(n) 
+
 #include <iostream>
 using namespace std;
+
 
 struct Node{
     int data;
@@ -22,15 +32,16 @@ struct Node{
     Node(int x, Node* left, Node* right):data(x), left(left), right(right){}
     
 };
-int maxDepth(Node* root, int&  maxDia){
+
+int MaxSumPath(Node* root, int& maxSum){
     if(root==nullptr){
         return 0;
     }
-    
-    int LeftHeight=maxDepth(root->left, maxDia);
-    int RightHeight=maxDepth(root->right, maxDia);
-    maxDia=max(maxDia, LeftHeight+RightHeight);
-    return 1+max(LeftHeight,RightHeight);
+    int lh= max(0,MaxSumPath(root->left, maxSum));
+    int rh=max(0,MaxSumPath(root->right, maxSum));
+    maxSum=max(maxSum, lh+rh+root->data);
+    return max(lh, rh)+root->data;
+
 }
 
 int main(){
@@ -47,9 +58,9 @@ int main(){
     root->right->right->right= new Node(10);
     root->right->right->right->right= new Node(11);
     root->right->right->right->right->right=new Node(12);   
-    int Diameter=0;
-     cout << "Hieght of the tree is  " << maxDepth(root, Diameter) << endl;
-     cout << "Diameter of the tree is " << Diameter << endl;
+    int maxSum=INT_MIN;
+     cout << "Max Sum over a path in the tree is   " << MaxSumPath(root, maxSum)<< endl;
+
 
     return 0;
 }
