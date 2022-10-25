@@ -18,41 +18,43 @@ struct Node{
 };
  
  // BFS Traversal
- vector<int> levelTraversal(Node* root){
-   // vector<vector<int> > ret;
-    vector<int> level;
+ vector<vector<int> > levelTraversal(Node* root){
+   
     if(root==nullptr){
-        return level;
+        return {};
     }
+    vector<vector<int> > ret;
     queue<Node*> q;
     q.push(root);
     while(!q.empty()){
         int size=q.size();
-        
+         vector<int> level;
         for(int i=0;i<size;++i){
+
             Node* node=q.front();
             q.pop();
+             level.push_back(node->data);
             if(node->left!=nullptr) q.push(node->left);
             if(node->right!=nullptr) q.push(node->right);
-            level.push_back(node->data);
+           
         }
-       // ret.push_back(level);
+        ret.push_back(level);
     }
-    return level;
+    return ret;
  }
 int main(){
-    struct Node* root= new Node(1);
-    root->left= new Node(2);
-    root->left->left=new Node(4);
-    root->left->right=new Node(5);
-    root->right= new Node(3);
-    root->right->left= new Node(6);
+    struct Node* root= new Node(3);
+    root->left= new Node(9);
+   // root->left->left=new Node(4);
+   // root->left->right=new Node(20);
+    root->right= new Node(20);
+    root->right->left= new Node(15);
     root->right->right= new Node(7);
-    vector<int> ans= levelTraversal(root);
+   vector<vector<int>> ans= levelTraversal(root);
     for(auto rows:ans){
-        //for(auto elem:rows){
-            cout << rows << " ";
-       // }
+        for(auto elem:rows){
+            cout << elem << " ";
+       }
     }
     cout << endl;
 }
