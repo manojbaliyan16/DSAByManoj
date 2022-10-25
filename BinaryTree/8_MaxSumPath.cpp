@@ -59,7 +59,10 @@ int main(){
     root->right->right->right->right= new Node(11);
     root->right->right->right->right->right=new Node(12);   
     int maxSum=INT_MIN;
-     cout << "Max Sum over a path in the tree is   " << MaxSumPath(root, maxSum)<< endl;
+    int sum=MaxSumPath(root, maxSum);
+
+     cout << "Max Sum over a path in the tree is   " << maxSum << endl;
+
 
 
     return 0;
