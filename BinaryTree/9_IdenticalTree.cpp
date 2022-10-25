@@ -16,15 +16,15 @@ using namespace std;
 
 struct TreeNode{
     int data;
-    Node* left;
-    Node* right;
-    Node(): data(0), left(nullptr), right(nullptr){}
-    Node(int val){
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(): data(0), left(nullptr), right(nullptr){}
+    TreeNode(int val){
         data=val;
         right=left=nullptr;
 
     }
-    Node(int x, Node* left, Node* right):data(x), left(left), right(right){}
+    TreeNode(int x, Node* left, Node* right):data(x), left(left), right(right){}
     
 };
 
