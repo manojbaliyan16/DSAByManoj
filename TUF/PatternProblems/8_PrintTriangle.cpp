@@ -22,7 +22,7 @@ void PrintTriangle(int n){
    for (size_t i = 0; i < n; i++)
    {
       // space in the beginning 
-      for (size_t j = 0; j < i; j++)
+      for (size_t j = 0; j <= i; j++)
       {
          cout << " ";   
       }
@@ -33,7 +33,7 @@ void PrintTriangle(int n){
       }
 
       // space in the end 
-      for (size_t j = 0; j < i; j++)
+      for (size_t j = 0; j <= i; j++)
       {
          cout << " ";   
       }
