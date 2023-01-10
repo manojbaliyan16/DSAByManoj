@@ -265,12 +265,144 @@ void Print18(int n){
     }
 }
 void Print19(int n){
+    // stars n-i
+    // i=0, i=i+2 ----->
+    // stars n-i
+    int space=0;
+    for(int i=0;i<n;++i){
+        /************First Part*******************/
+        // stars
+        for(int j=0;j<n-i;j++){
+            cout <<"*";
+        }
+        // space
+        for (size_t j = 0; j < space; j++)
+        {
+            cout<<" ";
+        }
+        
+        //stars
+        for(int j=0;j<n-i;j++){
+            cout <<"*";
+        }
+        space+=2;
+        cout<< "\n";
+    }
+    /****************2nd Part *****************/
+    // stars    space star
+    //  1         8     1
+    //  2         6     2
+    //  3         4     3
+    //  4          2     4
+    //  5          0      5
+    space=8;
+    for (size_t i = 1; i <= n; i++)
+    {
+            // stars
+        for(int j=0;j<i;j++){
+            cout <<"*";
+        }
+        // space
+        for (size_t j = 0; j < space; j++)
+        {
+            cout<<" ";
+        }
+        
+        //stars
+        for(int j=0;j<i;j++){
+            cout <<"*";
+        }
+        space-=2;
+        cout<< "\n";
+    }
+    
+
+}
+void Print20(int n){
+    /* first portion*/
+    // stars space stars
+    // 1  8 1
+    // 2  6 2
+    // 3  4 3
+    //.......
+    /***************first part *******************/
+    int space=8;
+    for (size_t i = 1; i <= n; i++)
+    {
+            // stars
+        for(int j=0;j<i;j++){
+            cout <<"*";
+        }
+        // space
+        for (size_t j = 0; j < space; j++)
+        {
+            cout<<" ";
+        }
+        
+        //stars
+        for(int j=0;j<i;j++){
+            cout <<"*";
+        }
+        space-=2;
+        cout<< "\n";
+    }
+
+    /***************Second part *******************/
+    space =0;
+    for(int i=0;i<n;++i){
+        
+        // stars
+        for(int j=0;j<n-i;j++){
+            cout <<"*";
+        }
+        // space
+        for (size_t j = 0; j < space; j++)
+        {
+            cout<<" ";
+        }
+        
+        //stars
+        for(int j=0;j<n-i;j++){
+            cout <<"*";
+        }
+        space+=2;
+        cout<< "\n";
+    }
+}
+void Print21(int n){
+    // Print the square means we have to print the stars only on boundries 
+/*
+    * * * *
+    *     *
+    *     *
+    *     *
+    * * * * 
+    */
+    // conditions where we have to print the stars are as below 
+    // i=0, j=0, i=n-1 j=n-1
+    for (size_t i = 0; i < n; i++)
+    {
+        for (size_t j = 0; j < n; j++)
+        {
+            if(i==0||j==0||i==n-1||j==n-1){
+                cout<<"*";
+            }else{
+                cout<<" ";
+            }
+
+        }
+        cout <<"\n";
+        
+    }
+    
 
 }
 
 int main(int argc, char const *argv[])
 {
     int n=5;
+    Print21(n);
+    //Print19(5);
     // cout << "\n";
     // cout << "*********************1************************* ";
     // cout << "\n";
@@ -318,7 +450,7 @@ int main(int argc, char const *argv[])
     //Print15(n);
     //Print16(n);
     //Print17(n);
-    Print18(n);
+    //Print18(n);
     
 
 
