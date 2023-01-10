@@ -224,7 +224,7 @@ void Print17(int n){
         }
         //char 
         char ch='A';
-        int breakPoint=(2*i+1)/2; //ABCBA
+        int breakPoint=(2*i+1)/2; //ABCBA let is here we have to print 5 char so upto 5/2+1 increasing sequencially and then decreasing
         for(int k=1;k<=(2*i+1);k++){
             cout << ch;
             if(k<=breakPoint){
@@ -244,6 +244,30 @@ void Print17(int n){
     }
     
 }
+void Print18(int n){
+   /*  for(int i=0;i<n;i++){
+        char ch='A'+n-1;
+        ch=ch-i;
+        for(int j=0;j<=i;++j){
+           cout << ch << " ";
+           ch=ch+1;
+        }
+        cout << "\n";
+    } */
+     // outer loop Number of Rows
+    for(int i=0;i<n;++i){
+
+        //char print
+        for(char ch='E'-i;ch <='E';ch++){
+            cout << ch << " ";
+        }
+        cout << "\n";
+    }
+}
+void Print19(int n){
+
+}
+
 int main(int argc, char const *argv[])
 {
     int n=5;
@@ -254,10 +278,10 @@ int main(int argc, char const *argv[])
     // cout << "\n";
     // cout << "*********************2************************* ";
     // cout << "\n";
-     Print2(n);
+    //Print2(n);
     // cout << "\n";
     // cout << "**********************3************************ ";
-     cout << "\n";
+    // cout << "\n";
     // Print3(n);
     // cout << "\n";
     // cout << "**********************4************************ ";
@@ -266,16 +290,16 @@ int main(int argc, char const *argv[])
     // cout << "\n";
     // cout << "**********************5*********************** ";
     // cout << "\n";
-     Print5(n);
-    cout << "\n";
+    // Print5(n);
+    //cout << "\n";
     // cout << "**********************6*********************** ";
     // cout << "\n";
     // Print6(n);
     // cout << "\n";
     // cout << "***********************7********************* ";
     // cout << "\n";
-    Print7(n);
-     cout << "\n";
+    // Print7(n);
+    // cout << "\n";
     // cout << "**********************8********************** ";
     // cout << "\n";
     // Print8(n);
@@ -293,7 +317,8 @@ int main(int argc, char const *argv[])
     //Print14(n);
     //Print15(n);
     //Print16(n);
-    Print17(n);
+    //Print17(n);
+    Print18(n);
     
 
 
