@@ -35,16 +35,23 @@ int Solve_1(int a, int b){
 */
 
 int gcd(int a, int b){
-    if(b==0) return a;
-    else return gcd(b, a%b) ;
+    if(b==0) return a; // --> O(1)
+    else return gcd(b, a%b) ; // i.e 2nd number is not zero in that case it is get called recurively with 2nd number is the first parameter and remainder of first number and 2nd number becomes the 2nd parameter
+    // it will continue till 2nd number becomes zero
+    // In this case larger number (a or b) will reduce by a factor of other 
+    // So the time complexity will be O(log min(a,b))
 }
+//T(n)=O(log(min(a,b)));
+// Original  Euclidean’s theorem used the substraction, we recursively substract from larger to smaller number 
 
+// 
 int main(int argc, char const *argv[])
 {
     int a=12;
     int b=15;
     cout << "GCD of " << a << "and" << b << "using approach_1 " << Solve_1(a, b)<<endl; 
     cout << "GCD of " << a << "and" << b << "using approach_2 " << gcd(a, b)<<endl; 
+  
 
     return 0;
 }
