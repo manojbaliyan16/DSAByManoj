@@ -6,11 +6,9 @@ This repository is dedicated to providing a comprehensive and interactive learni
 
 Our goal is to help you become proficient in these essential computer science concepts through a combination of theory and practice. We provide a variety of resources, including:
 
-- Detailed explanations of key data structures and algorithms, with examples and animations to help you visualize the concepts.
+- Detailed explanations of key data structures and algorithms, with examples and detailed explanation to help you visualize the concepts.
 
 - Practice problems, with solutions and explanations, to help you solidify your understanding and improve your problem-solving skills.
-
-- A collection of real-world use cases for each data structure and algorithm to help you understand their practical applications.
 
 - Time and space complexity analysis for each data structure and algorithm to help you understand the trade-offs involved in using different approaches.
 
